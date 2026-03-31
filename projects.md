@@ -15,6 +15,10 @@ I contribute to the research and development of lighter-than-air aerial vehicles
 ## MyWatkinsville
 *May 2025*
 I developed MyWatkinsville, a geolocation-driven mobile app designed to enhance cultural engagement in Watkinsville, GA. Built using Jetpack Compose, JavaScript, and Kotlin, the app integrates the Google Maps API for core location services and utilizes a Firebase backend to manage and sync real-time event and business data. The application achieved over 500 downloads, was officially adopted by the local tourism department, and earned a second-place finish in the Congressional App Challenge.
+<details>
+  <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">Watch my submission video!</summary>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/F3sG871hs7o" title="MyWatkinsville Submission Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; margin-top: 10px; max-width: 100%;"></iframe>
+</details>
 
 ## EV Delivery Fleet Feasibility Study
 *May 2025*
