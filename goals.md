@@ -1,3 +1,9 @@
+---
+layout: default
+title: Career Goals
+permalink: /goals/
+---
+
 # Career Goals
 
 ## Short-Term Goals (1-2 Years)
