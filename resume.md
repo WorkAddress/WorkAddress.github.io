@@ -1,3 +1,9 @@
+---
+layout: default
+title: Resume
+permalink: /resume/
+---
+
 # Resume
 
 <a href="link-to-your-resume.pdf" target="_blank">Click here to download my full ECE Career Fair Resume (PDF)</a>
