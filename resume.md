@@ -4,7 +4,7 @@
 
 # Resume
 
-<a href="link-to-your-resume.pdf" target="_blank">Click here to download my full ECE Career Fair Resume (PDF)</a>
+<a href="Werth_Resume_1100.pdf" target="_blank">Click here to download my full ECE Career Fair Resume (PDF)</a>
 
 ## Education
 **Georgia Institute of Technology** | Atlanta, GA
