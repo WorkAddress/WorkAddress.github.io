@@ -1,6 +1,5 @@
----
-layout: default
-title: index
+<span style="color: #888; font-weight: bold;">Home</span> | [About Me](about.html) | [Resume](resume.html) | [Career Goals](goals.html) | [Technical Projects](projects.html)
+
 ---
 
 # Welcome
