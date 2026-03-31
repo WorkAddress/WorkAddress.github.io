@@ -15,6 +15,12 @@ As part of a student organization focused on designing autonomous navigation sys
 ## Lighter Than Air Autonomy - Computer Vision Subteam
 *August 2025 - Present*
 I contribute to the research and development of lighter-than-air aerial vehicles (blimps), focusing on navigation and indoor flight autonomy. I implemented computer vision pipelines in Python using the OpenCV library to process, detect, and track visual features for autonomous vehicles. By analyzing camera data, I helped improve localization, obstacle awareness, and system robustness, collaborating with autonomy controls teams to integrate vision outputs into real-time decision-making.
+<details>
+  <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">See the github repo!</summary>
+  <a href="https://github.com/BUZZ-Blimps" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BUZZ-Blimps GitHub Repository" width="600" style="border-radius: 8px; margin-top: 10px; max-width: 100%; border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); transition: transform 0.2s;">
+  </a>
+</details>
 
 ## MyWatkinsville
 *May 2025*
@@ -35,4 +41,10 @@ I conducted a comprehensive feasibility study assessing the economic and logisti
 ## ECE 1100 Individual Discovery Project
 *Status: In Progress*
 
-Overview: This section will be updated with a comprehensive review of my Individual Discovery Project, detailing the methodologies, challenges overcome, and final engineering results once the core technical milestones are completed prior to the Discovery Project Showcase.
+Overview: For my ECE 1100 Discovery Project, I plan to make a MP3 player utilzing an Arduino Uno board. I have not finalized the project just yet, but by clicking on the button below you can see a little sneak peek.
+<details>
+  <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">See my current plans!</summary>
+  <a href="goals.html">
+    <img src="plans.jpg" alt="Robotics and Autonomous Systems Internship Plans" width="600" style="border-radius: 8px; margin-top: 10px; max-width: 100%; border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); transition: transform 0.2s;">
+  </a>
+</details>
