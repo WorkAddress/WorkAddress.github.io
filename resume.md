@@ -1,7 +1,5 @@
----
-layout: default
-title: Resume
-permalink: /resume/
+[Home](index.html) | [About Me](about.html) | <span style="color: #888; font-weight: bold;">Resume</span> | [Career Goals](goals.html) | [Technical Projects](projects.html)
+
 ---
 
 # Resume
