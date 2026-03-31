@@ -1,7 +1,5 @@
----
-layout: default
-title: Career Goals
-permalink: /goals/
+[Home](index.html) | [About Me](about.html) | [Resume](resume.html) | <span style="color: #888; font-weight: bold;">Career Goals</span> | [Technical Projects](projects.html)
+
 ---
 
 # Career Goals
