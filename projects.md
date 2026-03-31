@@ -1,3 +1,9 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
 # Technical Projects
 
 ## RoboNav - Electrical Subteam
