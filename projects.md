@@ -1,7 +1,5 @@
----
-layout: default
-title: Projects
-permalink: /projects/
+[Home](index.html) | [About Me](about.html) | [Resume](resume.html) | [Career Goals](goals.html) | <span style="color: #888; font-weight: bold;">Technical Projects</span>
+
 ---
 
 # Technical Projects
