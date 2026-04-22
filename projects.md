@@ -41,10 +41,93 @@ I conducted a comprehensive feasibility study assessing the economic and logisti
 ## ECE 1100 Individual Discovery Project
 *Status: In Progress*
 
-Overview: For my ECE 1100 Discovery Project, I plan to make a MP3 player utilzing an Arduino Uno board. I have not finalized the project just yet, but by clicking on the button below you can see a little sneak peek.
+## Custom Hardware Synthesizer
+*Status: Completed*
+
+---
+
+### The Problem
+
+Standard computer soundcards handle audio generation invisibly, abstracting away the physical creation of electrical signals. The engineering challenge of this project was to bypass those standard internal systems and build a custom, end-to-end hardware synthesizer from scratch. This required successfully bridging high-level desktop software with low-level embedded hardware. The goal was to create a reliable pipeline where a user interface could dictate precise musical parameters to a microcontroller, which would then mathematically generate and physically construct a raw analog audio wave. Furthermore, because digital microcontrollers output a strictly positive Direct Current (DC) voltage, a major secondary challenge was conditioning that raw electrical signal. Standard consumer audio equipment strictly requires an Alternating Current (AC) signal that swings perfectly above and below 0V, meaning the raw output would cause severe distortion and potential physical damage to the speaker cones if not correctly filtered.
+
+---
+
+### The Process
+
+To solve this, the synthesizer architecture was divided into a master software controller and a dedicated embedded hardware audio engine.
+
+---
+
+### The Software Controller (Java)
+
+The development began by building a Java-based desktop application to serve as the user interface. Using the jSerialComm library managed via Maven in IntelliJ, the Java program identifies the specific USB COM port connected to the Arduino (e.g., COM5). It configures the connection to establish a standard 8N1 serial data link at a baud rate of 115200 to match the hardware. This application opens a communication stream and sets up a standard input listener. When a user types a desired pitch delay number into the console, the Java program packages that integer into a string, adds a newline character (\n) for termination, and instantly flushes the data down the USB cable to the hardware.
+
 <details>
-  <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">See my current plans!</summary>
-  <a href="goals.html">
-    <img src="plans.jpg" alt="Robotics and Autonomous Systems Internship Plans" width="600" style="border-radius: 8px; margin-top: 10px; max-width: 100%; border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); transition: transform 0.2s;">
-  </a>
+<summary><b>View Java Code</b></summary>
+
+```java
+import com.fazecast.jSerialComm.SerialPort;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        System.setProperty("java.io.tmpdir", System.getProperty("user.dir") + "\\jserial_temp");
+
+        System.out.println("--- Starting Synthesizer Controller ---");
+
+        SerialPort[] ports = SerialPort.getCommPorts();
+        if (ports.length == 0) {
+            System.err.println("Error: No serial ports found. Is the Arduino plugged in?");
+            return;
+        }
+
+        SerialPort arduinoPort = ports[0]; 
+        
+        arduinoPort.setBaudRate(115200);
+        arduinoPort.setNumDataBits(8);
+        arduinoPort.setNumStopBits(1);
+        arduinoPort.setParity(SerialPort.NO_PARITY);
+
+        if (!arduinoPort.openPort()) {
+            System.err.println("Error: Failed to open port " + arduinoPort.getSystemPortName());
+            return;
+        }
+
+        System.out.println("Successfully connected to " + arduinoPort.getSystemPortName());
+
+        try {
+            Thread.sleep(1500);
+
+            PrintWriter serialWriter = new PrintWriter(arduinoPort.getOutputStream(), true); 
+
+            Scanner inputScanner = new Scanner(System.in);
+            while (true) {
+                String userInput = inputScanner.nextLine();
+                
+                if (userInput.equals("0")) {
+                    break;
+                }
+
+                try {
+                    serialWriter.println(userInput);
+                } catch (Exception e) {
+                    System.err.println("Error sending data.");
+                }
+            }
+            inputScanner.close();
+
+        } catch (InterruptedException e) {
+            System.err.println("Thread interrupted.");
+        } finally {
+            if (arduinoPort.isOpen()) {
+                arduinoPort.closePort();
+                System.out.println("Synthesizer disconnected.");
+            }
+        }
+    }
+}
+```
 </details>
