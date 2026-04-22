@@ -206,6 +206,11 @@ While the DAC successfully generates the physical soundwave, the raw output fluc
 To resolve this critical final hardware bottleneck, the analog signal path incorporates an AC coupling stage. By integrating an electrolytic capacitor inline between the DAC chip's output and the 3.5mm stereo jack, the capacitor acts as a physical wall, completely blocking the harmful Direct Current component while allowing the fluctuating AC audio frequencies to pass through unharmed. This conditioned waveform is then bridged to both left and right channels on the output jack. The end result is a highly responsive, end-to-end hardware synthesis system that successfully translates software instructions into pure, clean analog audio.
 
 <details>
+  <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">See the breadboard!</summary>
+  <img src="IMG_4296.jpeg" width="600" style="border-radius: 8px; margin-top: 10px; max-width: 100%; border: 1px solid #ddd; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+</details>
+
+<details>
 <summary style="cursor: pointer; color: #2B7CBA; font-weight: bold; margin-bottom: 10px;">Watch the synthesizer demo!</summary>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Hardware Synthesizer Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; margin-top: 10px; max-width: 100%;"></iframe>
 </details>
